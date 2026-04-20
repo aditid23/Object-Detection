@@ -34,6 +34,7 @@ Converts labels into YOLO format:
 Defective images → Full bounding box
 Non-defective images → Empty label file
 ## Dataset Structure
+```bash
 yolo_dataset/
 │
 ├── images/
@@ -45,6 +46,7 @@ yolo_dataset/
 │   └── val/
 │
 └── data.yaml
+```
 ## Model
 Model Used: YOLOv8 Nano (yolov8n.pt)
 Chosen for:
@@ -52,14 +54,16 @@ Fast training
 Lightweight architecture
 Suitable for quick experimentation
 ## Training
+```bash
 model.train(
     data="yolo_dataset/data.yaml",
     epochs=10,
     imgsz=640,
     batch=16,
     verbose=False
-)
+)```
 ## Training Parameters
+```bash
 Epochs: 10
 Image Size: 640
 Batch Size: 16
@@ -71,7 +75,7 @@ print(metrics.box.map)    # mAP@50-95
 
 Optional (to save predictions):
 
-results = model.val(save_json=True)
+results = model.val(save_json=True)```
 ## Results
 
 The model outputs:
