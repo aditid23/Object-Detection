@@ -61,7 +61,8 @@ model.train(
     imgsz=640,
     batch=16,
     verbose=False
-)```
+)
+```
 ## Training Parameters
 ```bash
 Epochs: 10
@@ -75,7 +76,8 @@ print(metrics.box.map)    # mAP@50-95
 
 Optional (to save predictions):
 
-results = model.val(save_json=True)```
+results = model.val(save_json=True)
+```
 ## Results
 
 The model outputs:
